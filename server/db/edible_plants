@@ -1,0 +1,10 @@
+const connection = require('./connection')
+
+// returns all the data
+function get_plants(db = connection) {
+  return db('edible_plants').select()
+}
+
+module.exports = {
+  get_plants,
+}
