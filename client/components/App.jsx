@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from 'react-redux'
 function App() {
   const dispatch = useDispatch()
   const plants = useSelector((s) => s.plants)
+  console.log(plants)
 
   useEffect(() => {
     dispatch(fetch_plants())
@@ -21,6 +22,7 @@ function App() {
             {plants.map((plant) => (
               <li key={plant.plant_name}>
                 <img src={plant.image_url} alt="my collection" />
+                <p>{plant.plant_name}</p>
               </li>
             ))}
           </ul>

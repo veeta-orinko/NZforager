@@ -2,7 +2,7 @@ import { SHOW_PLANTS } from '../actions/plants'
 
 const initialState = []
 
-const collectionReducer = (state = initialState, action) => {
+const plantReducer = (state = initialState, action) => {
   const { type, payload } = action
   switch (type) {
     case SHOW_PLANTS:
@@ -13,4 +13,4 @@ const collectionReducer = (state = initialState, action) => {
   }
 }
 
-export default collectionReducer
+export default plantReducer

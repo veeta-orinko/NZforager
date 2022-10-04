@@ -6,7 +6,7 @@ exports.seed = async (knex) => {
       plant_name: 'Bidibid / Piripiri',
       other_names: 'Acaena anserinifolia, Hutiwai',
       edible_parts: 'Leaves',
-      image_url: './images/bidibid',
+      image_url: './images/bidibid.png',
       description:
         'Perennial herb with slender woody stems, sticky crawling leaves, with a round and barbed seed head. Piripiri leaves have been noted for their medicinal use by Māori - the leaves brewed as tea are used as a natural remedy for kidney, bladder, and stomach issues and rheumatism. Leaves boiled or steeped in hot water, are also applied to open wounds.',
       tags: 'Medicinal',
@@ -48,7 +48,7 @@ exports.seed = async (knex) => {
       plant_name: 'Banana Passionfruit',
       other_names: '',
       edible_parts: 'Fruit',
-      image_url: './images/banana_passionfruit.png',
+      image_url: './images/bananapassionfruit.png',
       description:
         'Banana passionfruit are banned from sale, propogation and distribution in New Zealand due to being an invasive species. Inside the fruit is a sweet and edible pulp with seeds, similar to passionfruit. It can be used in pies, cakes, ice cream and juices.',
       tags: '',
