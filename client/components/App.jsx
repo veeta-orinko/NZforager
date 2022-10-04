@@ -1,32 +1,14 @@
-import React, { useEffect } from 'react'
-import { fetch_plants } from '../actions/plants'
-import { useDispatch, useSelector } from 'react-redux'
+import React from 'react'
+import Home from './Home'
 
 function App() {
-  const dispatch = useDispatch()
-  const plants = useSelector((s) => s.plants)
-  console.log(plants)
-
-  useEffect(() => {
-    dispatch(fetch_plants())
-  }, [])
-
   return (
     <>
       <header className="header">
-        <h1>My Collection</h1>
+        <h1>New Zealand Forager</h1>
       </header>
       <section className="main">
-        {
-          <ul>
-            {plants.map((plant) => (
-              <li key={plant.plant_name}>
-                <img src={plant.image_url} alt="my collection" />
-                <p>{plant.plant_name}</p>
-              </li>
-            ))}
-          </ul>
-        }
+        <Home />
       </section>
     </>
   )
