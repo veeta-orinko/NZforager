@@ -1,5 +1,7 @@
 import React from 'react'
+import Description from './Description'
 import Home from './Home'
+import { Route, Routes } from 'react-router-dom'
 
 function App() {
   return (
@@ -8,7 +10,10 @@ function App() {
         <h1>New Zealand Forager</h1>
       </header>
       <section className="main">
-        <Home />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="plants/:id" element={<Description />} />
+        </Routes>
       </section>
     </>
   )
