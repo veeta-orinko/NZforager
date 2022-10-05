@@ -17,22 +17,20 @@ function Home() {
   }, [])
 
   return (
-    <>
-      <section className="main">
-        {
-          <ul>
-            {plants.map((plant) => (
-              <li key={plant.plant_name}>
-                <Link to={`/plants/${plant.id}`}>
-                  <img src={plant.image_url} alt="plant photograph" />
-                </Link>
-                <p>{plant.plant_name}</p>
-              </li>
-            ))}
-          </ul>
-        }
-      </section>
-    </>
+    <section className="main">
+      {
+        <div className="card">
+          {plants.map((plant) => (
+            <div className="displaycard" key={plant.plant_name}>
+              <Link to={`/plants/${plant.id}`}>
+                <img src={plant.image_url} alt="plant photograph" />
+              </Link>
+              <p>{plant.plant_name}</p>
+            </div>
+          ))}
+        </div>
+      }
+    </section>
   )
 }
 

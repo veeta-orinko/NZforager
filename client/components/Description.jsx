@@ -23,10 +23,10 @@ function Description() {
   console.log(selectedPlant)
   return (
     <>
-      <section className="main">
+      <section className="description">
         {
-          <ul>
-            <li key={selectedPlant?.plant_name}>
+          <div>
+            <div key={selectedPlant?.plant_name}>
               <img src={selectedPlant?.image_url} alt="plant photograph" />
               <Upload />
               <p>{selectedPlant?.plant_name}</p>
@@ -34,8 +34,8 @@ function Description() {
               <p>Edible parts: {selectedPlant?.edible_parts}</p>
               <p>About: {selectedPlant?.description}</p>
               <button>{selectedPlant?.tags}</button>
-            </li>
-          </ul>
+            </div>
+          </div>
         }
       </section>
     </>

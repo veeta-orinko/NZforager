@@ -1,5 +1,46 @@
 body {
   color: antiquewhite;
-  background-color: rgb(56, 143, 93);
+  background-color: rgb(88, 155, 117);
 }
 
+.header {
+text-align: center;
+}
+
+.main{
+width: 1300px;
+display: flex;
+justify-content: center;
+}
+
+img {
+  border-radius: 20px;
+  height:220px;
+  width: 220px;
+  object-fit: cover;
+  
+}
+.card {
+justify-content: center;
+text-align: center;
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+gap: 35px;
+}
+
+.appmain {
+width: 100vw;
+display: flex;
+justify-content: center;
+}
+
+.description {
+display: flex;
+justify-content: center;
+}
+
+.displaycard {
+background-color: rgba(38, 108, 89, 0.638);
+padding: 10px;
+}

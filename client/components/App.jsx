@@ -9,7 +9,7 @@ function App() {
       <header className="header">
         <h1>New Zealand Forager</h1>
       </header>
-      <section className="main">
+      <section className="appmain">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="plants/:id" element={<Description />} />

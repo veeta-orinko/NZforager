@@ -7,7 +7,10 @@ function Upload() {
   const handleFileInputChange = (e) => {
     const file = e.target.files[0]
     previewFile(file)
+    setSelectedFile(file)
+    setFileInputState(e.target.value)
   }
+
   const previewFile = (file) => {
     const reader = new FileReader()
     reader.readAsDataURL(file)
@@ -17,8 +20,12 @@ function Upload() {
   }
   const handleSubmitFile = (e) => {
     e.preventDefault()
-    if (!previewSource) return
-    uploadImage(previewSource)
+    if (!selectedFile) return
+    const reader = new FileReader()
+    reader.readAsDataURL(selectedFile)
+    reader.onloadend = () => {
+      uploadImage(reader.result)
+    }
   }
 
   const uploadImage = async (base64EncodedImage) => {
@@ -29,6 +36,8 @@ function Upload() {
         body: JSON.stringify({ data: base64EncodedImage }),
         headers: { 'Content-type': 'application/json' },
       })
+      setFileInputState('')
+      setPreviewSource('')
     } catch (err) {
       console.error(err)
     }
