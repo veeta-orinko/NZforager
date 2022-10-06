@@ -2,13 +2,13 @@ const express = require('express')
 const path = require('path')
 const server = express()
 const plantRoute = require('./routes/edible_plants')
-// const { cloudinary } = require('./utils/cloudinary')
-// let cors = require('cors')
+const { cloudinary } = require('./utils/cloudinary')
+let cors = require('cors')
 
-// server.use(cors())
+server.use(cors())
 
 server.use(express.json())
-// server.use(express.urlencoded({ limit: '50mb', extended: true }))
+server.use(express.urlencoded({ limit: '50mb', extended: true }))
 server.use(express.static(path.join(__dirname, 'public')))
 
 server.use('/api/v1/plants', plantRoute)
