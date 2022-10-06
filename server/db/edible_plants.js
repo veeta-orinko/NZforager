@@ -10,7 +10,6 @@ function get_plant(id, db = connection) {
 }
 
 function post_plant(plant, db = connection) {
-  console.log('db', plant)
   return db('edible_plants').insert({
     plant_name: plant.plant_name,
     other_names: plant.other_names,

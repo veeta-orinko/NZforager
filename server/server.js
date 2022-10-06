@@ -17,32 +17,32 @@ server.get('*', (req, res) => {
   res.sendFile(path.resolve('server/public/index.html'))
 })
 
-// // get cloudinary images
-// server.get('/api/images', async (req, res) => {
-//   const { resources } = await cloudinary.search
-//     .expression('folder:dev_setups')
-//     .sort_by('public_id', 'desc')
-//     .max_results(30)
-//     .execute()
+// get cloudinary images
+server.get('/api/images', async (req, res) => {
+  const { resources } = await cloudinary.search
+    .expression('folder:dev_setups')
+    .sort_by('public_id', 'desc')
+    .max_results(30)
+    .execute()
 
-//   const publicIds = resources.map((file) => file.public_id)
-//   res.send(publicIds)
-// })
+  const publicIds = resources.map((file) => file.public_id)
+  res.send(publicIds)
+})
 
-// // cloudinary upload
-// server.post('/api/upload', async (req, res) => {
-//   try {
-//     const fileStr = req.body.data
-//     const uploadedResponse = await cloudinary.uploader.upload(fileStr, {
-//       upload_preset: 'dev_setups',
-//     })
-//     console.log(uploadedResponse)
-//     res.json({ msg: 'yay' })
-//   } catch (err) {
-//     console.error(err)
-//     res.status(500).json({ err: 'something went wrongggg' })
-//   }
-// })
+// cloudinary upload
+server.post('/api/upload', async (req, res) => {
+  try {
+    const fileStr = req.body.data
+    const uploadedResponse = await cloudinary.uploader.upload(fileStr, {
+      upload_preset: 'dev_setups',
+    })
+    console.log(uploadedResponse)
+    res.json({ msg: 'yay' })
+  } catch (err) {
+    console.error(err)
+    res.status(500).json({ err: 'something went wrongggg' })
+  }
+})
 
 const port = process.env.PORT || 3001
 server.listen(port, () => {

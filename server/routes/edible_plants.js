@@ -18,7 +18,6 @@ router.get('/', (req, res) => {
 
 router.post('/', (req, res) => {
   const plant = req.body
-  console.log('route', req.body)
   db.post_plant(plant)
     .then((ids) => {
       return db.get_plant(ids[0])
@@ -33,10 +32,10 @@ router.post('/', (req, res) => {
         tags: plant.tags,
       })
     })
-  // .catch((err) => {
-  //   console.error(err)
-  //   res.status(500).json({ message: 'Something went wrong' })
-  // })
+    .catch((err) => {
+      console.error(err)
+      res.status(500).json({ message: 'Something went wrong' })
+    })
 })
 
 module.exports = router
