@@ -11,5 +11,14 @@ export function get_plants() {
       console.error('error message goes here', error.message)
     })
 }
-
-// send only used when it's a post (forms, etc)
+export function post_plant(plant) {
+  return request
+    .post('/api/v1/plants')
+    .send(plant)
+    .then((res) => {
+      return res.body
+    })
+    .catch((error) => {
+      console.error('error message goes here', error.message)
+    })
+}

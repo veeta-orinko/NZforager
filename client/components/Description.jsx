@@ -3,6 +3,7 @@ import { fetch_plants } from '../actions/plants'
 import { useDispatch, useSelector } from 'react-redux'
 import { useParams } from 'react-router-dom'
 import Upload from './Upload'
+import Displayimg from './Displayimg'
 /// To do: add user photo option (right & left photo arrow + thumbnails)
 // Recipe database via web scraping
 // tags with clickthrough button to other plants sharing these characteristics
@@ -23,18 +24,23 @@ function Description() {
   console.log(selectedPlant)
   return (
     <>
-      <section className="description">
+      <section>
         {
-          <div>
+          <div className="descriptioncard">
+            <br></br>
+            <br></br>
             <div key={selectedPlant?.plant_name}>
               <img src={selectedPlant?.image_url} alt="plant photograph" />
+              <Displayimg />
               <Upload />
               <p>{selectedPlant?.plant_name}</p>
               <p>Other names: {selectedPlant?.other_names}</p>
               <p>Edible parts: {selectedPlant?.edible_parts}</p>
-              <p>About: {selectedPlant?.description}</p>
+              <p className="about">About: {selectedPlant?.description}</p>
               <button>{selectedPlant?.tags}</button>
             </div>
+            <br></br>
+            <br></br>
           </div>
         }
       </section>

@@ -7,7 +7,7 @@ function App() {
   return (
     <>
       <header className="header">
-        <h1>New Zealand Forager</h1>
+        <h1>New Zealand Foragers Glossary</h1>
       </header>
       <section className="appmain">
         <Routes>

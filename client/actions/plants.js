@@ -1,5 +1,5 @@
-import { get_plants } from '../apis/plants'
-
+import { get_plants, post_plant } from '../apis/plants'
+export const ADD_PLANT = 'ADD_PLANT'
 export const SHOW_PLANTS = 'SHOW_PLANTS'
 export const SET_ERROR = 'SET_ERROR'
 
@@ -17,11 +17,31 @@ export function fetch_plants() {
   }
 }
 
+export function send_plant(planty) {
+  return (dispatch) => {
+    return post_plant(planty)
+      .then((plant) => {
+        dispatch(add_plant(plant))
+        return null
+      })
+      .catch((err) => {
+        dispatch(setError(err.message))
+      })
+  }
+}
+
 // Simple action
 export function show_plants(plants) {
   return {
     type: SHOW_PLANTS,
     payload: plants,
+  }
+}
+
+export function add_plant(plant) {
+  return {
+    type: ADD_PLANT,
+    payload: plant,
   }
 }
 
