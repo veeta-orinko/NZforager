@@ -8,6 +8,7 @@ The web application has an easy and minimal interface, for quick access to assis
 
 
 To do:
+- Finish up CSS 
 - JWT-Auth
 - Display user cloud photo uploads in front end 
 - Finish the add plant function
