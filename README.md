@@ -8,7 +8,7 @@ This application is for foragers in New Zealand who are interested in identifyin
 
 The descriptions include a guide around best uses, Maori history of use, as well as which parts of the plant are safe for consumption. 
 
-The addition of a geo-map linked to plant tags in the database will help users find local foraging spots. Recipes will inspire ways of using the plants.
+The addition of a geo-map linked to plant tags in the database will help users find local foraging spots. Recipes will inspire ways of using the plants, and overall the app encourages resourcefulness and connection with plant use and history.
 
 
 To do:
