@@ -44,7 +44,7 @@ server.post('/api/upload', async (req, res) => {
   }
 })
 
-const port = process.env.PORT || 3001
+const port = process.env.PORT
 server.listen(port, () => {
   console.log('listening on 3001, idk why ')
 })

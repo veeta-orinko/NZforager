@@ -92,5 +92,9 @@
   "jest": {
     "testEnvironment": "jsdom"
   },
+  "engines": {
+    "node": "16.x"
+},
   "browserslist": "> 2%, not dead"
+  
 }
