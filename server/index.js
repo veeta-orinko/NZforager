@@ -1,8 +1,9 @@
 const server = require('./server')
 
-const PORT = process.env.PORT || 3000
-
-server.listen(PORT, () => {
-  // eslint-disable-next-line no-console
-  console.log('Listening on port', PORT)
+server.listen(process.env.PORT || 3000, function () {
+  console.log(
+    'Express server listening on port %d in %s mode',
+    this.address().port,
+    server.settings.env
+  )
 })
