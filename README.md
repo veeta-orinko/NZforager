@@ -2,9 +2,13 @@
 <img src = './server/public/images/Readme2.png'> </img>
 
 # NZ Forager 
-My final project at Dev Academy, with a focus on developing a full stack web application using redux, react, node.js, SQLlite, and cloud photo storage.
+My final project at Dev Academy, with a tech focus on developing a full stack web application using redux, react, node.js, and databases.
 
-The web application has an easy and minimal interface, for quick access to assist in identifying plants. This makes the prospect of plant identification fun and accessible to people new to the subject.
+This application is for foragers in New Zealand who are interested in identifying plants for dyes, eating, or medicinal uses. The interface is designed to be very minimalist, with a simple tap/ click through to plant descriptions and user photos - user photos help ensure the certainty of identification for foragers, with many photos of plants from different angles and lighting. 
+
+The descriptions include a guide around best uses, Maori history of use, as well as which parts of the plant are safe for consumption. 
+
+The addition of a geo-map linked to plant tags in the database will help users find local foraging spots. Recipes will inspire ways of using the plants.
 
 
 To do:
