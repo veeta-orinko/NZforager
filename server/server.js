@@ -44,11 +44,9 @@ server.post('/api/upload', async (req, res) => {
   }
 })
 
-server.listen(process.env.PORT || 3000, function () {
-  console.log(
-    'Express server listening on port %d in %s mode',
-    this.address().port,
-    server.settings.env
-  )
+const port = process.env.PORT || 3001
+server.listen(port, () => {
+  console.log('listening on 3001, idk why ')
 })
+
 module.exports = server
